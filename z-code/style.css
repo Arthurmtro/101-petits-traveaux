@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Source+Serif+4&family=Source+Serif+Pro:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  text-decoration-color: none;
+}
+h1 {
+  font-weight: normal;
+}
+body {
+  background-image: url(/photos/background.png);
+}
+.header {
+  background: #f0f4f9;
+  position: fixed;
+  height: 14vh;
+  width: 100%;
+}
+
+/* Barre marron du header comportant les infos Localisation/Mail/Réseaux sociaux */
+.contact-header {
+  background: #5f4e54;
+  width: 100vw;
+  height: 5vh;
+  position: fixed;
+  font-size: 15px;
+  opacity: 1;
+  color: #ffcf39;
+  font-family: "Inter", sans-serif;
+}
+.contact-link:visited {
+  color: #ffcf39;
+}
+.contact-link:hover {
+  color: #f0f4f9;
+}
+/* lien vers google map */
+.localisation-header {
+  position: fixed;
+  top: 1.5vh;
+  left: 10vw;
+}
+.localisation-header svg {
+  position: absolute;
+  right: 101%;
+  top: -10%;
+}
+/* TODO: nous envoie directement vers gmail avec formulaire préremplis */
+.mail-header {
+  position: fixed;
+  top: 1.5vh;
+  left: 40vw;
+}
+.mail-header svg {
+  position: absolute;
+  right: 101%;
+  top: -10%;
+}
+.social-header {
+  position: fixed;
+  top: 1.5vh;
+  right: 6vw;
+  top: 1%;
+}
+/* Bande blanche avec Logo/Nom/Navbar/Btn RDV */
+.main-header {
+  color: #534b52;
+  font-family: "Roboto", sans-serif;
+  margin-left: 20vw;
+  margin-top: 8.5vh;
+}
+/* logo */
+.main-header svg {
+  position: absolute;
+  right: 80%;
+  top: 45%;
+}
+.header-title {
+  position: absolute;
+  bottom: 2.5vh;
+}
+/* btn "Prendre rendez-vous" */
+.btn {
+  font-family: "Roboto", sans-serif;
+  background-color: #5f4e54;
+  color: #e4e4e4;
+  border: 0px;
+  border-radius: 5px;
+  padding: 10px 15px 10px 15px;
+  cursor: pointer;
+}
+
+.btn:visited {
+  color: #e4e4e4;
+}
+.btn:hover {
+  color: #ffcf39;
+}
+
+.navbar {
+  text-align: right;
+  position: absolute;
+  left: 58vw;
+  bottom: 15%;
+  font-size: larger;
+}
+
+.link {
+  margin: 0px 1vw 0px 9px;
+}
+
+.link:visited {
+  color: #534b52;
+}
+.link:hover {
+  color: #ffcf39;
+}
+/* phrase d'accroche */
+.hook {
+  padding: 20vh 0vw 20vh 0vw;
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60vw;
+  color: #707070;
+}
+/* phrase d'accroche 2*/
+.hook1 {
+  text-align: left;
+  font-size: 110px;
+  margin-left: 5vw;
+}
+/* phrase d'accroche 3*/
+.hook2 {
+  text-align: right;
+  font-size: 80px;
+  margin-right: 5vw;
+}
+.presentation {
+  height: 380px;
+}
+/* box de gauche avec compétences */
+.competences {
+  position: relative;
+  margin-top: 0px;
+  margin-left: 20vw;
+  z-index: -2;
+  width: 560px;
+  height: 325px;
+  background: #f0f4f9;
+  border: solid 1px;
+  border-radius: 5px;
+  border-color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 34px;
+  font-weight: bold;
+  color: #707070;
+  padding: 30px 25px;
+}
+.presentation-title {
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+.list-competences {
+  padding-left: 25px;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  margin-bottom: 7px;
+}
+li:before {
+  content: "- ";
+  color: #ffcf39;
+}
+
+/* box droite avec photo */
+.fernando {
+  position: relative;
+  margin-top: -460px;
+  margin-left: 50vw;
+  z-index: -1;
+  width: 560px;
+  height: 275px;
+  background: #f0f4f9;
+  border: solid 1px;
+  border-radius: 5px;
+  border-color: #707070;
+  font-family: "Roboto", sans-serif;
+  font-size: 34px;
+  font-weight: bold;
+  color: #707070;
+}
+.fernando p {
+  padding: 30px 25px;
+}
+.fernando .btn {
+  position: relative;
+  bottom: 20%;
+  margin: 50px;
+}
+.portrait {
+  position: absolute;
+  margin-top: -280px;
+  margin-left: -150px;
+  width: 740px;
+}
+/* ex: "Fernando Monteiro" dans Présentation */
+.bold-color {
+  color: #ffcf39;
+}
+
+#gallerie {
+  margin-left: auto;
+  margin-right: auto;
+}
+.gallerie-header {
+  z-index: -1;
+  position: relative;
+  margin-top: 0vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 35px;
+  color: #707070;
+  margin-left: 10vw;
+  top: 120px;
+}
+.gallerie-title {
+  position: absolute;
+}
+.showmore {
+  position: absolute;
+  padding: 15px 15px;
+  top: 2.5vw;
+  right: 10vw;
+}
+.grid {
+  position: relative;
+  text-align: center;
+  z-index: -1;
+  top: 240px;
+}
+.pic1,
+.pic4 {
+  width: 81vw;
+  border: solid 2px #ffcf39;
+}
+.pic2,
+.pic3 {
+  width: 40vw;
+  border: solid 2px #ffcf39;
+}
+
+.hook3 {
+  text-align: left;
+  font-size: 70px;
+  margin-top: 140px;
+}
+.hook4 {
+  position: relative;
+  bottom: 5vh;
+  text-align: right;
+  font-size: 50px;
+}
+
+.rdv-banner {
+  position: relative;
+  bottom: 170px;
+  background: #f0f4f9;
+  height: 10vh;
+}
+.rdv-btn {
+  position: relative;
+  padding: 13px;
+  font-size: 14px;
+  top: 2vh;
+  left: 20vw;
+}
+.text-rdv-banner {
+  position: relative;
+  left: 50vw;
+  bottom: 3.5vh;
+  width: 400px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #707070;
+}
