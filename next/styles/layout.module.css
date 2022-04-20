@@ -1,0 +1,39 @@
+.navbar {
+  position: sticky;
+  top: 0;
+
+  border: 1px solid red;
+}
+
+.contact-nav {
+  background-color: #5f4e54;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  height: 100vh;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  justify-content: center;
+  align-items: center;
+}
