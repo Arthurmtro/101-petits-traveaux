@@ -1,6 +1,6 @@
-import type { AppProps } from "next/app";
 import { CSSProperties, useEffect, useState } from "react";
-import NavLink from "next/Link";
+import type { AppProps } from "next/app";
+import NavLink from "next/link";
 
 import { BsFacebook } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
