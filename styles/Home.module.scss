@@ -1,0 +1,12 @@
+.hero {
+  height: 65vh;
+  z-index: -1;
+  margin-top: -5.35rem;
+  background: url("/assets/imgs/hero-cover.jpg") center 80% / cover fixed;
+  filter: brightness(0.75);
+  -webkit-filter: brightness(0.75);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
