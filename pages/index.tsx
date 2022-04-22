@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         <title>101 Petits Travaux</title>
         <meta
           name="description"
-          content="101 petits Travaux, Fernando Monteiro"
+          content="101 petits Travaux Fernando Monteiro"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
