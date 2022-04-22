@@ -2,13 +2,14 @@ name: 🚀 Deploy website on push
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
   pull_request:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -19,11 +20,11 @@ jobs:
       - name: 🚚 Checkout repository
         uses: actions/checkout@v3
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "yarn"
 
       - name: 🔨 Build Project
         run: |
