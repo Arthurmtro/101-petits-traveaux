@@ -1,5 +1,6 @@
 import { CSSProperties, useEffect, useState } from "react";
 import type { AppProps } from "next/app";
+import { useRouter } from "next/router";
 import NavLink from "next/link";
 
 import { BsFacebook } from "react-icons/bs";
@@ -8,9 +9,12 @@ import { FiMapPin } from "react-icons/fi";
 
 import styles from "../styles/layout.module.scss";
 import "../styles/globals.scss";
+import Button from "../components/Buttons";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [scrollPosition, setScrollPosition] = useState(0);
+
+  const router = useRouter();
 
   const handleScrool = () => {
     setScrollPosition(window.scrollY);
@@ -51,7 +55,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           style={
             {
               "--background-color":
-                scrollPosition <= 45 ? "transparent" : "var(--background-dark)",
+                scrollPosition <= 45 && router.pathname === "/"
+                  ? "transparent"
+                  : "var(--background-dark)",
+              "--box-shadow":
+                scrollPosition <= 45 && router.pathname === "/"
+                  ? "transparent"
+                  : "0 0 2rem #00000061",
             } as CSSProperties
           }
         >
@@ -70,7 +80,9 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <NavLink href="/">Aménagements</NavLink>
               </li>
               <li>
-                <NavLink href="/">Prendre contact</NavLink>
+                <Button onClick={() => router.push("/")}>
+                  Prendre contact
+                </Button>
               </li>
             </ul>
           </div>
@@ -82,9 +94,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       </main>
 
       <footer className={styles.footer}>
+        © 101 petits travaux | Tous droits réservés | Réalisé par
         <a href="https://www.mtro.fr" target="_blank" rel="noopener noreferrer">
-          Powered by <span className={styles.logo}>Arthur Monteiro</span>
+          Arthur Monteiro
         </a>
+        |<NavLink href="/mentions-legales">Mentions légales</NavLink>
       </footer>
     </>
   );

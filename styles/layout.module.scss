@@ -42,6 +42,8 @@
 
   transition: all 300ms ease-in-out;
 
+  box-shadow: var(--box-shadow);
+
   & div {
     display: flex;
     justify-content: space-between;
