@@ -6,6 +6,7 @@ import NavLink from "next/link";
 import { BsFacebook } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
 import { FiMapPin } from "react-icons/fi";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 import styles from "../styles/layout.module.scss";
 import "../styles/globals.scss";
@@ -13,6 +14,8 @@ import Button from "../components/Buttons";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [scrollPosition, setScrollPosition] = useState(0);
+
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const router = useRouter();
 
@@ -51,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </ul>
         </header>
         <header
-          className={styles["nav-bar"]}
+          className={styles["nav-bar-desktop"]}
           style={
             {
               "--background-color":
@@ -61,7 +64,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               "--box-shadow":
                 scrollPosition <= 45 && router.pathname === "/"
                   ? "transparent"
-                  : "0 0 2rem #00000061",
+                  : "0 2rem 2rem -2rem #00000061",
             } as CSSProperties
           }
         >
@@ -80,11 +83,23 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <NavLink href="/">Aménagements</NavLink>
               </li>
               <li>
-                <Button onClick={() => router.push("/")}>
+                <Button onClick={() => router.push("/contact")}>
                   Prendre contact
                 </Button>
               </li>
             </ul>
+          </div>
+        </header>
+        <header className={styles["nav-bar-mobile"]}>
+          <div
+            className={styles["nav-bar-mobile-hamburger"]}
+            onClick={() => setMobileNavOpen((prev) => !prev)}
+          >
+            {!mobileNavOpen ? (
+              <AiOutlineMenu size={24} />
+            ) : (
+              <AiOutlineClose size={24} />
+            )}
           </div>
         </header>
       </>
@@ -93,12 +108,29 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </main>
 
+      <section>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10736.801931747905!2d2.0185381!3d47.7193579!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2186ad8d206abcb5!2s101%20petits%20travaux!5e0!3m2!1sfr!2sfr!4v1650820604971!5m2!1sfr!2sfr"
+          width="100%"
+          height="350"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+
       <footer className={styles.footer}>
-        © 101 petits travaux | Tous droits réservés | Réalisé par
-        <a href="https://www.mtro.fr" target="_blank" rel="noopener noreferrer">
-          Arthur Monteiro
-        </a>
-        |<NavLink href="/mentions-legales">Mentions légales</NavLink>
+        <p> © 101 petits travaux </p> <p>Tous droits réservés </p>
+        <NavLink href="/mentions-legales">Mentions légales </NavLink>
+        <p>
+          Réalisé par
+          <a
+            href="https://www.mtro.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Arthur Monteiro
+          </a>
+        </p>
       </footer>
     </>
   );
