@@ -1,7 +1,7 @@
 .hero {
-  height: 65vh;
+  height: 78vh;
   z-index: -1;
-  margin-top: -6.25rem;
+  margin-top: -6.3rem;
   background: url("/assets/imgs/hero-cover.jpg") center 80% / cover fixed;
   filter: brightness(0.75);
   -webkit-filter: brightness(0.75);
@@ -68,6 +68,10 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   & li {
     cursor: pointer;

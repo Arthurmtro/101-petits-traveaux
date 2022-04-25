@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           <h2>Nos services</h2>
 
           <ul className={styles["services-list"]}>
-            <Link href="/">
+            <Link href="/" passHref>
               <li>
                 <MdOutlineMapsHomeWork size={32} />
                 <h3>Maconnerie</h3>
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
                 </span>
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <li>
                 <MdOutlineMapsHomeWork size={32} />
                 <h3>Aménagement Extérieur/Intérieur</h3>
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
                 </span>
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <li>
                 <MdOutlineMapsHomeWork size={32} />
                 <h3>Agrandissement</h3>
@@ -59,7 +59,7 @@ const Home: NextPage = () => {
                 </span>
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <li>
                 <MdOutlineMapsHomeWork size={32} />
                 <h3>Clôture</h3>

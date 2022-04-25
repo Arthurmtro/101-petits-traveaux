@@ -44,6 +44,10 @@
 
   box-shadow: var(--box-shadow);
 
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+
   & div {
     display: flex;
     justify-content: space-between;
