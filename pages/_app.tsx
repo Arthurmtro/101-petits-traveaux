@@ -55,7 +55,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               rel="noopener noreferrer"
             >
               <IoMdMail size={24} />
-              <span>45240fernando45240@gmail.com</span>
+              <span>fernando45240@gmail.com</span>
             </a>
             <a
               href="https://www.facebook.com/101-petits-travaux-106890404769940/"
