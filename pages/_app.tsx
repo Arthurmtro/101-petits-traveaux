@@ -8,19 +8,24 @@ import { IoMdMail } from "react-icons/io";
 import { FiMapPin } from "react-icons/fi";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
-import styles from "../styles/layout.module.scss";
 import "../styles/globals.scss";
+import styles from "../styles/layout.module.scss";
+
 import Button from "../components/Buttons";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(true);
 
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const router = useRouter();
 
   const handleScrool = () => {
-    setScrollPosition(window.scrollY);
+    if (window.scrollY >= 45) {
+      setScrollPosition(false);
+    } else {
+      setScrollPosition(true);
+    }
   };
 
   useEffect(() => {
@@ -36,11 +41,19 @@ function MyApp({ Component, pageProps }: AppProps) {
       <>
         <header className={styles["contact-bar"]}>
           <ul>
-            <a href="">
+            <a
+              href="https://goo.gl/maps/HgfQqD17A7mSJoRe9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FiMapPin size={24} />
               <span>Menestreau en villette, 45240</span>
             </a>
-            <a href="mailto:45240fernando45240@gmail.com">
+            <a
+              href="mailto:45240fernando45240@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <IoMdMail size={24} />
               <span>45240fernando45240@gmail.com</span>
             </a>
@@ -57,12 +70,12 @@ function MyApp({ Component, pageProps }: AppProps) {
           className={styles["nav-bar-desktop"]}
           style={
             {
-              "--background-color":
-                scrollPosition <= 45 && router.pathname === "/"
+              "--navbar-background-color":
+                scrollPosition && router.pathname === "/"
                   ? "transparent"
                   : "var(--background-dark)",
-              "--box-shadow":
-                scrollPosition <= 45 && router.pathname === "/"
+              "--navbar-box-shadow":
+                scrollPosition && router.pathname === "/"
                   ? "transparent"
                   : "0 2rem 2rem -2rem #00000061",
             } as CSSProperties
@@ -70,7 +83,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         >
           <div>
             <h1>
-              <NavLink href="/">101 Petits Travaux</NavLink>
+              <NavLink href="/">LOGO</NavLink>
             </h1>
             <ul>
               <li>
@@ -101,6 +114,28 @@ function MyApp({ Component, pageProps }: AppProps) {
               <AiOutlineClose size={24} />
             )}
           </div>
+          {mobileNavOpen && (
+            <div className={styles["nav-bar-mobile-content"]}>
+              <ul>
+                <li>
+                  <NavLink href="/">Accueil</NavLink>
+                </li>
+                <li>
+                  <NavLink href="/">Maçonnerie</NavLink>
+                </li>
+                <li>
+                  <NavLink href="/">Aménagements</NavLink>
+                </li>
+                <li>
+                  <Button onClick={() => router.push("/contact")}>
+                    Prendre contact
+                  </Button>
+                </li>
+              </ul>
+
+              <h2>CONTACT EMAIL: </h2>
+            </div>
+          )}
         </header>
       </>
 

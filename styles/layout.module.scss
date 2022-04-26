@@ -1,13 +1,14 @@
 .contact-bar {
   z-index: 10;
   background-color: var(--background-dark);
-  display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 0 2rem;
 
-  @media screen and (max-width: 800px) {
-    display: none;
+  display: none;
+
+  @media screen and (min-width: 800px) {
+    display: flex;
   }
 
   & ul {
@@ -37,8 +38,7 @@
   z-index: 10;
   top: 0;
   position: sticky;
-  background-color: var(--background-color);
-  display: flex;
+  background-color: var(--navbar-background-color);
   left: 0;
   right: 0;
   justify-content: center;
@@ -46,10 +46,12 @@
 
   transition: all 300ms ease-in-out;
 
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--navbar-box-shadow);
 
-  @media screen and (max-width: 800px) {
-    display: none;
+  display: none;
+
+  @media screen and (min-width: 800px) {
+    display: flex;
   }
 
   & div {
@@ -82,11 +84,6 @@
 }
 
 .nav-bar-mobile {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 100;
-
   @media screen and (min-width: 800px) {
     display: none;
   }
@@ -100,6 +97,22 @@
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
+
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.nav-bar-mobile-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: red;
+  z-index: 100;
 }
 
 .main {

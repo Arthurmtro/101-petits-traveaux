@@ -1,6 +1,5 @@
 .hero {
   height: 78vh;
-  z-index: -1;
   margin-top: -6.3rem;
   background: url("/assets/imgs/hero-cover.jpg") center 80% / cover fixed;
   filter: brightness(0.75);
@@ -11,6 +10,10 @@
   align-items: center;
 
   color: #f7f7f7;
+
+  @media screen and (max-width: 800px) {
+    margin-top: 0;
+  }
 }
 
 .services {
@@ -31,6 +34,8 @@
       text-transform: uppercase;
       font-size: x-large;
       font-weight: bold;
+
+      margin-bottom: 2rem;
     }
   }
 }

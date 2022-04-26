@@ -1,14 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Head from "next/head";
 
 import styles from "../styles/pages/Home.module.scss";
 
-import { IoMdHammer } from "react-icons/io";
 import { MdOutlineMapsHomeWork } from "react-icons/md";
-import { BsNodePlus } from "react-icons/bs";
 import { GiBrickWall, GiStairs } from "react-icons/gi";
+import { IoMdHammer } from "react-icons/io";
+import { BsNodePlus, BsTranslate } from "react-icons/bs";
 
 const Home: NextPage = () => {
   return (
@@ -25,9 +26,17 @@ const Home: NextPage = () => {
       <section className={styles.hero}>
         <h1>101 Petits Travaux</h1>
       </section>
-
       <section className={styles.services}>
-        <div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          variants={{
+            visible: { opacity: 1, transform: "translateX(0rem)" },
+            hidden: { opacity: 0, transform: "translateX(10rem)" },
+          }}
+        >
           <h2>Nos services</h2>
 
           <ul className={styles["services-list"]}>
@@ -72,10 +81,20 @@ const Home: NextPage = () => {
               </li>
             </Link>
           </ul>
-        </div>
+        </motion.div>
       </section>
 
-      <section className={styles.presentation}>
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.3 }}
+        variants={{
+          visible: { opacity: 1, transform: "translateX(0rem)" },
+          hidden: { opacity: 0, transform: "translateX(-10rem)" },
+        }}
+        className={styles.presentation}
+      >
         <h2>Qui sommes nous ?</h2>
         <div className={styles["presentation-img"]}>
           <IoMdHammer size={32} />
@@ -106,7 +125,7 @@ const Home: NextPage = () => {
             allowFullScreen
           ></iframe>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };
