@@ -1,7 +1,7 @@
 .hero {
   height: 78vh;
-  margin-top: -6.3rem;
-  background: url("/assets/imgs/hero-cover.jpg") center 80% / cover fixed;
+  margin-top: 0;
+  background: url("/assets/imgs/hero-cover-min.jpg") center 80% / cover fixed;
   filter: brightness(0.75);
   -webkit-filter: brightness(0.75);
 
@@ -11,12 +11,16 @@
 
   color: #f7f7f7;
 
-  @media screen and (max-width: 800px) {
-    margin-top: 0;
+  @media screen and (min-width: 800px) {
+    margin-top: -6.3rem;
   }
 
   & h1 {
-    font-size: 8rem;
+    font-size: 3rem;
+
+    @media screen and (min-width: 800px) {
+      font-size: 8rem;
+    }
   }
 }
 
