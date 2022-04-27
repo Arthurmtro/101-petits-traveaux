@@ -1,21 +1,21 @@
-import { CSSProperties, useEffect, useState } from "react";
 import type { AppProps } from "next/app";
+import { CSSProperties, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import NavLink from "next/link";
 
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
 import { FiMapPin } from "react-icons/fi";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-
-import "../styles/globals.scss";
-import styles from "../styles/layout.module.scss";
 
 import Button from "../components/Buttons";
 
+import styles from "../styles/layout.module.scss";
+import "../styles/globals.scss";
+
 function MyApp({ Component, pageProps }: AppProps) {
   const [scrollPosition, setScrollPosition] = useState(true);
-
+  const [desktopMedia, setDesktopMedia] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const router = useRouter();
@@ -28,44 +28,50 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   };
 
+  const handleResize = () => {
+    setDesktopMedia(window.matchMedia("(min-width: 800px)").matches);
+  };
+
   useEffect(() => {
+    window.addEventListener("resize", handleResize);
     document.addEventListener("scroll", handleScrool);
 
     return () => {
+      window.removeEventListener("resize", handleResize);
       document.removeEventListener("scroll", handleScrool);
     };
   });
 
   return (
-    <>
-      <>
-        <header className={styles["contact-bar"]}>
-          <ul>
-            <a
-              href="https://goo.gl/maps/HgfQqD17A7mSJoRe9"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FiMapPin size={24} />
-              <span>Menestreau en villette, 45240</span>
-            </a>
-            <a
-              href="mailto:45240fernando45240@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <IoMdMail size={24} />
-              <span>fernando45240@gmail.com</span>
-            </a>
-            <a
-              href="https://www.facebook.com/101-petits-travaux-106890404769940/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <BsFacebook size={24} />
-            </a>
-          </ul>
-        </header>
+    <main>
+      <header className={styles["contact-bar"]}>
+        <ul>
+          <a
+            href="https://goo.gl/maps/HgfQqD17A7mSJoRe9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FiMapPin size={24} />
+            <span>Menestreau en villette, 45240</span>
+          </a>
+          <a
+            href="mailto:45240fernando45240@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IoMdMail size={24} />
+            <span>fernando45240@gmail.com</span>
+          </a>
+          <a
+            href="https://www.facebook.com/101-petits-travaux-106890404769940/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BsFacebook size={24} />
+          </a>
+        </ul>
+      </header>
+      {desktopMedia ? (
         <header
           className={styles["nav-bar-desktop"]}
           style={
@@ -103,6 +109,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             </ul>
           </div>
         </header>
+      ) : (
         <header className={styles["nav-bar-mobile"]}>
           <div
             className={styles["nav-bar-mobile-hamburger"]}
@@ -137,7 +144,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             </div>
           )}
         </header>
-      </>
+      )}
 
       <main className={styles.main}>
         <Component {...pageProps} />
@@ -167,7 +174,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </a>
         </p>
       </footer>
-    </>
+    </main>
   );
 }
 
