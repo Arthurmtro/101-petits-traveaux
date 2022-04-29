@@ -2,7 +2,7 @@ import styles from "../styles/components/Button.module.scss";
 
 type ButtonType = {
   children: JSX.Element | string;
-  onClick?: () => {};
+  onClick?: () => any;
 };
 
 const Button = ({ children, onClick }: ButtonType) => {

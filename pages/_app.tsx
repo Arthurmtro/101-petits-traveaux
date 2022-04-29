@@ -49,33 +49,35 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <main>
-      <header className={styles["contact-bar"]}>
-        <ul>
-          <a
-            href="https://goo.gl/maps/HgfQqD17A7mSJoRe9"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FiMapPin size={24} />
-            <span>Menestreau en villette, 45240</span>
-          </a>
-          <a
-            href="mailto:45240fernando45240@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IoMdMail size={24} />
-            <span>fernando45240@gmail.com</span>
-          </a>
-          <a
-            href="https://www.facebook.com/101-petits-travaux-106890404769940/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <BsFacebook size={24} />
-          </a>
-        </ul>
-      </header>
+      {router.pathname === "/" && (
+        <header className={styles["contact-bar"]}>
+          <ul>
+            <a
+              href="https://goo.gl/maps/HgfQqD17A7mSJoRe9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FiMapPin size={24} />
+              <span>Menestreau en villette, 45240</span>
+            </a>
+            <a
+              href="mailto:45240fernando45240@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <IoMdMail size={24} />
+              <span>fernando45240@gmail.com</span>
+            </a>
+            <a
+              href="https://www.facebook.com/101-petits-travaux-106890404769940/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BsFacebook size={24} />
+            </a>
+          </ul>
+        </header>
+      )}
       {desktopMedia ? (
         <header
           className={styles["nav-bar-desktop"]}
@@ -127,29 +129,54 @@ function MyApp({ Component, pageProps }: AppProps) {
             )}
           </div>
           <div
-            id="navbar"
             className={`${styles["nav-bar-mobile-content"]} ${
               styles[mobileNavOpen ? "fadeIn" : "fadeOut"]
             }`}
           >
             <ul>
               <li>
-                <NavLink href="/">Accueil</NavLink>
+                <p
+                  onClick={() => {
+                    router.push("/");
+                    setMobileNavOpen(false);
+                  }}
+                >
+                  Accueil
+                </p>
               </li>
               <li>
-                <NavLink href="/">Maçonnerie</NavLink>
+                <p
+                  onClick={() => {
+                    router.push("/maçonnerie");
+                    setMobileNavOpen(false);
+                  }}
+                >
+                  Maçonnerie
+                </p>
               </li>
               <li>
-                <NavLink href="/">Aménagements</NavLink>
+                <p
+                  onClick={() => {
+                    router.push("/amenagements");
+                    setMobileNavOpen(false);
+                  }}
+                >
+                  Aménagements
+                </p>
               </li>
               <li>
-                <Button onClick={() => router.push("/contact")}>
+                <Button
+                  onClick={() => {
+                    router.push("/contact");
+                    setMobileNavOpen(false);
+                  }}
+                >
                   Prendre contact
                 </Button>
               </li>
             </ul>
 
-            <h2>CONTACT EMAIL: </h2>
+            <p>CONTACT EMAIL: </p>
           </div>
         </header>
       )}
