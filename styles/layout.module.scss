@@ -36,9 +36,9 @@
 
 .nav-bar-desktop {
   z-index: 10;
-  top: 0;
   position: sticky;
   background-color: var(--navbar-background-color);
+  top: 0;
   left: 0;
   right: 0;
   justify-content: center;
@@ -61,6 +61,7 @@
 
     width: 100%;
     max-width: 1280px;
+    background-color: transparent;
 
     & a {
       color: #e7e7e7;
@@ -103,10 +104,8 @@
 
   z-index: 1000;
   position: fixed;
-  top: 0;
-  // left: 0;
-  // bottom: 0;
-  right: 0;
+  top: 1rem;
+  right: 1rem;
 }
 
 .nav-bar-mobile-content {
@@ -118,11 +117,24 @@
 
   background-color: red;
   z-index: 100;
+
+  overflow: hidden;
+}
+
+.fadeOut {
+  opacity: 0;
+  width: 0;
+  transition: all 200ms ease-in-out;
+}
+.fadeIn {
+  opacity: 1;
+  width: 100%;
+  transition: all 200ms ease-in-out;
 }
 
 .main {
   min-height: 90vh;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .footer {

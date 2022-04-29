@@ -126,28 +126,31 @@ function MyApp({ Component, pageProps }: AppProps) {
               <AiOutlineClose size={24} />
             )}
           </div>
-          {mobileNavOpen && (
-            <div className={styles["nav-bar-mobile-content"]}>
-              <ul>
-                <li>
-                  <NavLink href="/">Accueil</NavLink>
-                </li>
-                <li>
-                  <NavLink href="/">Maçonnerie</NavLink>
-                </li>
-                <li>
-                  <NavLink href="/">Aménagements</NavLink>
-                </li>
-                <li>
-                  <Button onClick={() => router.push("/contact")}>
-                    Prendre contact
-                  </Button>
-                </li>
-              </ul>
+          <div
+            id="navbar"
+            className={`${styles["nav-bar-mobile-content"]} ${
+              styles[mobileNavOpen ? "fadeIn" : "fadeOut"]
+            }`}
+          >
+            <ul>
+              <li>
+                <NavLink href="/">Accueil</NavLink>
+              </li>
+              <li>
+                <NavLink href="/">Maçonnerie</NavLink>
+              </li>
+              <li>
+                <NavLink href="/">Aménagements</NavLink>
+              </li>
+              <li>
+                <Button onClick={() => router.push("/contact")}>
+                  Prendre contact
+                </Button>
+              </li>
+            </ul>
 
-              <h2>CONTACT EMAIL: </h2>
-            </div>
-          )}
+            <h2>CONTACT EMAIL: </h2>
+          </div>
         </header>
       )}
 
