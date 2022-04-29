@@ -33,6 +33,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   };
 
   useEffect(() => {
+    document.body.style.overflow = mobileNavOpen ? "hidden" : "auto";
+  }, [mobileNavOpen]);
+
+  useEffect(() => {
+    handleResize();
     window.addEventListener("resize", handleResize);
     document.addEventListener("scroll", handleScrool);
 
