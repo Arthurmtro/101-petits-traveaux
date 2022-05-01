@@ -26,6 +26,7 @@ const Home: NextPage = () => {
       <section className={styles.hero}>
         <h1>101 Petits Travaux</h1>
       </section>
+
       <section className={styles.services}>
         <motion.div
           initial="hidden"

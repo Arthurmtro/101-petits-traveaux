@@ -1,12 +1,17 @@
 .contact-page {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  gap: 2.5rem;
+
+  gap: 4rem;
 
   & h1 {
-    font-size: larger;
+    margin-top: 5rem;
+    font-size: xx-large;
+    font-weight: bold;
+
+    text-align: center;
   }
 }
 
@@ -17,5 +22,40 @@
 
   @media screen and (min-width: 800px) {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  & a {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    border: 3px solid var(--primary-color);
+    border-radius: 0.5rem;
+    padding: 2rem;
+
+    transition: all 250ms ease-in-out;
+
+    & svg {
+      fill: var(--primary-color);
+    }
+
+    & p {
+      font-size: large;
+      font-weight: 600;
+    }
+
+    &:hover {
+      border-color: var(--secondary-color);
+      transform: scale(1.1);
+
+      & svg {
+        fill: var(--secondary-color);
+      }
+
+      & p {
+        color: var(--secondary-color);
+      }
+    }
   }
 }

@@ -103,10 +103,10 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <NavLink href="/">Accueil</NavLink>
               </li>
               <li>
-                <NavLink href="/">Maçonnerie</NavLink>
+                <NavLink href="/Maconnerie">Maçonnerie</NavLink>
               </li>
               <li>
-                <NavLink href="/">Aménagements</NavLink>
+                <NavLink href="/Amenagements">Aménagements</NavLink>
               </li>
               <li>
                 <Button onClick={() => router.push("/contact")}>
@@ -189,7 +189,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10736.801931747905!2d2.0185381!3d47.7193579!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2186ad8d206abcb5!2s101%20petits%20travaux!5e0!3m2!1sfr!2sfr!4v1650820604971!5m2!1sfr!2sfr"
           width="100%"
-          height="350"
+          height="450"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>

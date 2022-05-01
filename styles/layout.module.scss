@@ -5,6 +5,7 @@
   justify-content: flex-end;
   padding: 0 2rem;
 
+  overflow-x: hidden;
   display: none;
 
   @media screen and (min-width: 800px) {
@@ -146,12 +147,13 @@
 }
 
 .main {
-  min-height: 90vh;
+  min-height: 55vh;
   width: 100%;
   // overflow-x: hidden;
 }
 
 .footer {
+  overflow-x: hidden;
   background-color: var(--background-dark);
   color: #e7e7e7;
   display: flex;
