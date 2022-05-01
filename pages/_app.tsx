@@ -21,6 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   const handleScrool = () => {
+    console.log("SCROLL");
     if (window.scrollY >= 45) {
       setScrollPosition(false);
     } else {
@@ -38,11 +39,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     handleResize();
-    window.addEventListener("resize", handleResize);
+    document.addEventListener("resize", handleResize);
     document.addEventListener("scroll", handleScrool);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("resize", handleResize);
       document.removeEventListener("scroll", handleScrool);
     };
   });
