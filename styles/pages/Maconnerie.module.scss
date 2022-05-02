@@ -3,7 +3,7 @@
   height: 78vh;
   max-height: 85rem;
   margin-top: 0;
-  background: url("/assets/imgs/hero-cover-min.jpg") center 80% / cover fixed;
+  background: url("/assets/imgs/masonry.jpg") center 80% / cover fixed;
   filter: brightness(0.75);
   -webkit-filter: brightness(0.75);
 
@@ -30,84 +30,12 @@
   }
 }
 
-.services {
-  overflow-x: hidden;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-
-  background-color: var(--background-dark);
-  color: #f7f7f7;
-
-  width: 100%;
-
-  padding: 3rem;
-
-  & div {
-    width: 100%;
-    max-width: 1280px;
-    margin: 2rem auto;
-
-    & h2 {
-      text-align: center;
-      text-transform: uppercase;
-      font-size: x-large;
-      font-weight: bold;
-
-      margin-bottom: 2rem;
-    }
-  }
-}
-
-.services-list {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-
-  @media screen and (max-width: 800px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  & li {
-    cursor: pointer;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
-    &:hover {
-      & svg {
-        fill: var(--secondary-color);
-      }
-
-      & h3 {
-        text-decoration: underline;
-        color: var(--secondary-color);
-      }
-    }
-
-    & svg {
-      transition: all 150ms linear;
-    }
-
-    & h3 {
-      text-align: center;
-      color: var(--primary-color);
-      text-transform: uppercase;
-      font-size: large;
-      font-weight: bold;
-      transition: all 150ms linear;
-    }
-  }
-}
-
-.presentation {
+.description {
   overflow-x: hidden;
   max-width: 1280px;
   margin: 3rem auto;
+
+  gap: 1rem;
 
   display: flex;
   justify-content: center;
@@ -116,27 +44,34 @@
 
   & h2 {
     text-transform: uppercase;
-    font-size: x-large;
+    font-size: large;
     font-weight: bold;
+
+    text-align: center;
+
+    @media screen and (min-width: 800px) {
+      font-size: x-large;
+    }
   }
 }
 
-.presentation-img {
+.description-img {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background-color: var(--primary-color);
-  border-radius: 100%;
-  padding: 1.15rem;
+  width: 100%;
 
-  & img {
-    height: 3rem;
+  padding: 2rem;
+
+  @media screen and (min-width: 800px) {
+    width: 50%;
   }
 }
 
-.presentation-zone {
+.description-zone {
   display: flex;
+  overflow-x: hidden;
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -154,10 +89,48 @@
   }
 
   @media screen and(max-width: 800px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
 
     & p {
       width: 100%;
     }
+  }
+}
+
+.realisations {
+  background-color: var(--background-dark);
+  color: #f7f7f7;
+  overflow-x: hidden;
+
+  padding: 3rem 0;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background-color: var(--background-dark);
+
+  width: 100%;
+
+  & span {
+    font-weight: bold;
+    opacity: 0.7;
+  }
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+  width: 90%;
+
+  margin: 0 auto;
+
+  @media screen and (min-width: 800px) {
+    width: 60%;
   }
 }
