@@ -1,7 +1,7 @@
 .hero {
-  overflow: hidden;
+  overflow-x: hidden;
   z-index: 100;
-  height: 50vh;
+  height: 55vh;
   max-height: 85rem;
   margin-top: 0;
   background: url("/assets/imgs/masonry.webp") center 80% / cover fixed;
@@ -95,11 +95,12 @@
 }
 
 .realisations {
+  overflow-x: hidden;
   background-color: var(--background-dark);
   color: #f7f7f7;
   overflow-x: hidden;
 
-  padding: 3rem 0;
+  // padding: 3rem 0;
 
   display: flex;
   justify-content: center;
@@ -117,13 +118,18 @@
   }
 }
 
+.realisations-list {
+  padding: 0;
+}
+
 .carousel {
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
-  padding: 2rem;
+  padding: 2rem 0;
   width: 90%;
 
   margin: 0 auto;
