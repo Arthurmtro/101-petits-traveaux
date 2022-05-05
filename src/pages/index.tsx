@@ -31,10 +31,10 @@ const Home: NextPage = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
           variants={{
             visible: { opacity: 1, transform: "translateX(0rem)" },
-            hidden: { opacity: 0, transform: "translateX(10rem)" },
+            hidden: { opacity: 0, transform: "translateX(8rem)" },
           }}
         >
           <h2>Nos services</h2>
@@ -83,7 +83,7 @@ const Home: NextPage = () => {
         transition={{ duration: 0.3 }}
         variants={{
           visible: { opacity: 1, transform: "translateX(0rem)" },
-          hidden: { opacity: 0, transform: "translateX(-10rem)" },
+          hidden: { opacity: 0, transform: "translateX(-8rem)" },
         }}
         className={styles.presentation}
       >
