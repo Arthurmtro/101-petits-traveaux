@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import Head from "next/head";
 
 import styles from "../styles/pages/Home.module.scss";
@@ -41,46 +40,38 @@ const Home: NextPage = () => {
           <h2>Nos services</h2>
 
           <ul className={styles["services-list"]}>
-            <Link href="/" passHref>
-              <li>
-                <MdOutlineMapsHomeWork size={32} />
-                <h3>Maconnerie</h3>
-                <span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing eLinkt.
-                  <br /> Beatae facere itaque repellat autem placeat a.
-                </span>
-              </li>
-            </Link>
-            <Link href="/" passHref>
-              <li>
-                <GiStairs size={32} />
-                <h3>Aménagement Extérieur/Intérieur</h3>
-                <span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing eLinkt.
-                  <br /> Beatae facere itaque repellat autem placeat a.
-                </span>
-              </li>
-            </Link>
-            <Link href="/" passHref>
-              <li>
-                <BsNodePlus size={32} />
-                <h3>Agrandissement</h3>
-                <span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing eLinkt.
-                  <br /> Beatae facere itaque repellat autem placeat a.
-                </span>
-              </li>
-            </Link>
-            <Link href="/" passHref>
-              <li>
-                <GiBrickWall size={32} />
-                <h3>Clôture</h3>
-                <span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing eLinkt.
-                  <br /> Beatae facere itaque repellat autem placeat a.
-                </span>
-              </li>
-            </Link>
+            <li>
+              <MdOutlineMapsHomeWork size={32} />
+              <h3>Maconnerie</h3>
+              <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing eLinkt.
+                <br /> Beatae facere itaque repellat autem placeat a.
+              </span>
+            </li>
+            <li>
+              <GiStairs size={32} />
+              <h3>Aménagement Extérieur/Intérieur</h3>
+              <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing eLinkt.
+                <br /> Beatae facere itaque repellat autem placeat a.
+              </span>
+            </li>
+            <li>
+              <BsNodePlus size={32} />
+              <h3>Agrandissement</h3>
+              <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing eLinkt.
+                <br /> Beatae facere itaque repellat autem placeat a.
+              </span>
+            </li>
+            <li>
+              <GiBrickWall size={32} />
+              <h3>Clôture</h3>
+              <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing eLinkt.
+                <br /> Beatae facere itaque repellat autem placeat a.
+              </span>
+            </li>
           </ul>
         </motion.div>
       </section>
@@ -122,7 +113,6 @@ const Home: NextPage = () => {
 
           <iframe
             src="https://giphy.com/embed/tAeB6dptxnoli" //3o7abDnUPDkOC05QU8 IS FUN !
-            frameBorder="0"
             allowFullScreen
           ></iframe>
         </div>

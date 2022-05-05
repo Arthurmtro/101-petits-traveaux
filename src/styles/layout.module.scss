@@ -127,10 +127,19 @@
   color: #e7e7e7;
   font-size: x-large;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-bottom: 2rem;
+
   & ul {
     list-style: none;
     display: flex;
     flex-direction: column;
+
+    font-size: x-large;
+    font-weight: bold;
     gap: 0.5rem;
   }
 }

@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 import { motion } from "framer-motion";
 import Head from "next/head";
 
@@ -57,7 +59,7 @@ const Maconnerie: NextPage = () => {
 
           <img
             className={styles["description-img"]}
-            src="/assets/imgs/maconnerie/presentation_01.jpg"
+            src="/assets/imgs/maconnerie/presentation_carousel_01.webp"
             alt="101 petits travaux, maconnerie"
           />
         </div>
@@ -77,7 +79,7 @@ const Maconnerie: NextPage = () => {
         <div className={styles["description-zone"]}>
           <img
             className={styles["description-img"]}
-            src="/assets/imgs/maconnerie/presentation_02.jpg"
+            src="/assets/imgs/maconnerie/presentation_carousel_02.webp"
             alt="101 petits travaux, maconnerie"
           />
           <ul>
@@ -107,14 +109,29 @@ const Maconnerie: NextPage = () => {
           }}
         >
           <h2>NOS RÉALISATIONS</h2>
+          <span>Voici quelques unes de nos réalisations</span>
 
           <ul className={styles["realisations-list"]}>
-            <span>Voici quelques unes de nos réalisations</span>
-            <img
-              className={styles["carousel"]}
-              src="/assets/imgs/maconnerie/presentation_carousel_00.jpg"
-              alt="101 petits travaux, maconnerie"
-            />
+            <Carousel className={styles["carousel"]} infiniteLoop>
+              <div>
+                <img
+                  src="/assets/imgs/maconnerie/presentation_carousel_00.webp"
+                  alt="101 petits travaux, maconnerie"
+                />
+              </div>
+              <div>
+                <img
+                  src="/assets/imgs/maconnerie/presentation_carousel_01.webp"
+                  alt="101 petits travaux, maconnerie"
+                />
+              </div>
+              <div>
+                <img
+                  src="/assets/imgs/maconnerie/presentation_carousel_02.webp"
+                  alt="101 petits travaux, maconnerie"
+                />
+              </div>
+            </Carousel>
           </ul>
         </motion.div>
       </section>

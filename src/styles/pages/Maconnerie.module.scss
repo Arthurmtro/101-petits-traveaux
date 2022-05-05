@@ -4,7 +4,7 @@
   height: 50vh;
   max-height: 85rem;
   margin-top: 0;
-  background: url("/assets/imgs/masonry.jpg") center 80% / cover fixed;
+  background: url("/assets/imgs/masonry.webp") center 80% / cover fixed;
   filter: brightness(0.75);
   -webkit-filter: brightness(0.75);
 
@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
 
-  color: #f7f7f7;
+  color: #ffffff;
 
   overflow-x: hidden;
 
@@ -121,6 +121,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   padding: 2rem;
   width: 90%;

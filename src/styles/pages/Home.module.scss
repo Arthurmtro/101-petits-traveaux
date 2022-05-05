@@ -3,7 +3,7 @@
   height: 78vh;
   max-height: 85rem;
   margin-top: 0;
-  background: url("/assets/imgs/hero-cover-min.jpg") center 80% / cover fixed;
+  background: url("/assets/imgs/hero-cover-min.webp") center 80% / cover fixed;
   filter: brightness(0.75);
   -webkit-filter: brightness(0.75);
 
@@ -71,7 +71,6 @@
   }
 
   & li {
-    cursor: pointer;
     padding: 1rem 2rem;
     display: flex;
     justify-content: center;
