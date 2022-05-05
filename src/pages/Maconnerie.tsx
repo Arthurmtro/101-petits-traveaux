@@ -9,7 +9,7 @@ import styles from "../styles/pages/Maconnerie.module.scss";
 
 const Maconnerie: NextPage = () => {
   return (
-    <>
+    <div style={{ maxWidth: "100vw", overflowX: "hidden" }}>
       <Head>
         <title>101 Petits Travaux | Maçonnerie</title>
         <meta
@@ -135,7 +135,7 @@ const Maconnerie: NextPage = () => {
           </ul>
         </motion.div>
       </section>
-    </>
+    </div>
   );
 };
 

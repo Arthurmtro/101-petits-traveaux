@@ -109,7 +109,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                   <NavLink href="/Maconnerie">Maçonnerie</NavLink>
                 </li>
                 <li>
-                  <NavLink href="/">Aménagements</NavLink>
+                  <NavLink href="/Amenagement">Aménagements</NavLink>
                 </li>
                 <li>
                   <Button onClick={() => router.push("/contact")}>
@@ -160,7 +160,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <li>
                   <p
                     onClick={() => {
-                      router.push("/");
+                      router.push("/Amenagement");
                       setMobileNavOpen(false);
                     }}
                   >
