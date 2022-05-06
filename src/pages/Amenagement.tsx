@@ -42,8 +42,8 @@ const Amenagement: NextPage = () => {
         <div className={styles["description-zone"]}>
           <img
             className={styles["description-img"]}
-            src="/assets/imgs/maconnerie/presentation_carousel_01.webp"
-            alt="101 petits travaux, maconnerie"
+            src="/assets/imgs/amenagement/presentation_carousel_01.webp"
+            alt="101 petits travaux, amenagement"
           />
           <p>
             Nous proposons nos services d&apos;aménagements extérieur/intérieur
@@ -81,8 +81,8 @@ const Amenagement: NextPage = () => {
           </ul>
           <img
             className={styles["description-img"]}
-            src="/assets/imgs/maconnerie/presentation_carousel_02.webp"
-            alt="101 petits travaux, maconnerie"
+            src="/assets/imgs/amenagement/presentation_carousel_00.webp"
+            alt="101 petits travaux, amenagement"
           />
         </div>
       </motion.section>
@@ -105,22 +105,22 @@ const Amenagement: NextPage = () => {
             <Carousel className={styles["carousel"]} infiniteLoop>
               <div>
                 <img
-                  src="/assets/imgs/maconnerie/presentation_carousel_00.webp"
-                  alt="101 petits travaux, maconnerie"
+                  src="/assets/imgs/amenagement/presentation_carousel_00.webp"
+                  alt="101 petits travaux, amenagement"
                 />
               </div>
               <div>
                 <img
-                  src="/assets/imgs/maconnerie/presentation_carousel_01.webp"
-                  alt="101 petits travaux, maconnerie"
+                  src="/assets/imgs/amenagement/presentation_carousel_01.webp"
+                  alt="101 petits travaux, amenagement"
                 />
               </div>
-              <div>
+              {/* <div>
                 <img
-                  src="/assets/imgs/maconnerie/presentation_carousel_02.webp"
-                  alt="101 petits travaux, maconnerie"
+                  src="/assets/imgs/amenagement/presentation_carousel_02.webp"
+                  alt="101 petits travaux, amenagement"
                 />
-              </div>
+              </div> */}
             </Carousel>
           </ul>
         </motion.div>
