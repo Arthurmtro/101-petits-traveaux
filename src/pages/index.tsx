@@ -43,34 +43,34 @@ const Home: NextPage = () => {
             <li>
               <MdOutlineMapsHomeWork size={32} />
               <h3>Maconnerie</h3>
-              <span>
+              {/* <span>
                 Lorem ipsum dolor sit amet consectetur adipisicing eLinkt.
                 <br /> Beatae facere itaque repellat autem placeat a.
-              </span>
+              </span> */}
             </li>
             <li>
               <GiStairs size={32} />
               <h3>Aménagement Extérieur/Intérieur</h3>
-              <span>
+              {/* <span>
                 Lorem ipsum dolor sit amet consectetur adipisicing eLinkt.
                 <br /> Beatae facere itaque repellat autem placeat a.
-              </span>
+              </span> */}
             </li>
             <li>
               <BsNodePlus size={32} />
               <h3>Agrandissement</h3>
-              <span>
+              {/* <span>
                 Lorem ipsum dolor sit amet consectetur adipisicing eLinkt.
                 <br /> Beatae facere itaque repellat autem placeat a.
-              </span>
+              </span> */}
             </li>
             <li>
               <GiBrickWall size={32} />
               <h3>Clôture</h3>
-              <span>
+              {/* <span>
                 Lorem ipsum dolor sit amet consectetur adipisicing eLinkt.
                 <br /> Beatae facere itaque repellat autem placeat a.
-              </span>
+              </span> */}
             </li>
           </ul>
         </motion.div>
