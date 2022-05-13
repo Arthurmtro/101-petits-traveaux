@@ -35,7 +35,7 @@ const Maconnerie: NextPage = () => {
         className={styles.description}
       >
         <h2>
-          NOS SERVICES POUR VOS PROJETS DE MAÇONNERIE NEUVE SUR ORLEAN ET SES
+          NOS SERVICES POUR VOS PROJETS DE MAÇONNERIE NEUVE SUR ORLEANS ET SES
           ALENTOURS
         </h2>
 
@@ -83,8 +83,7 @@ const Maconnerie: NextPage = () => {
             alt="101 petits travaux, maconnerie"
           />
           <ul>
-            <li>Construction de maisons neuves sur plans</li>
-            <li>Construction de maison sur mesure</li>
+            <li>Création de garages ou d&apos;abris de jardin</li>
             <li>
               Constructions de style contemporaines, modernes ou traditionnelles
             </li>

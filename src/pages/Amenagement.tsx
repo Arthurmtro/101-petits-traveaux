@@ -35,7 +35,7 @@ const Amenagement: NextPage = () => {
         className={styles.description}
       >
         <h2>
-          NOS SERVICES POUR VOS PROJETS D&apos;AMENAGEMENTS NEUVE SUR ORLEAN ET
+          NOS SERVICES POUR VOS PROJETS D&apos;AMENAGEMENTS NEUVE SUR ORLEANS ET
           SES ALENTOURS
         </h2>
 
@@ -47,7 +47,7 @@ const Amenagement: NextPage = () => {
           />
           <p>
             Nous proposons nos services d&apos;aménagements extérieur/intérieur
-            maçonnerie sur le secteur de Orléan et 30 kilomètres autour.
+            maçonnerie sur le secteur de Orléans et 30 kilomètres autour.
             <br />
             <br /> Vous recherchez une entreprise pour vous accompagner dans vos
             travaux d&apos;aménagements ?
@@ -73,11 +73,11 @@ const Amenagement: NextPage = () => {
       >
         <div className={styles["description-zone"]}>
           <ul>
-            <li>Tous types de dégorements</li>
-            <li>Toitures</li>
-            <li>Soudures Plob ou Cuivre</li>
+            <li>Créations de salles de bain</li>
+            <li>Montages d&apos;abris de jardin</li>
+            <li>Décoration de jardins</li>
+            <li>Aménagements de combles</li>
             <li>Ouverture de porte fermée et fermeture provisoire</li>
-            <li>Dépose/Repose WC</li>
           </ul>
           <img
             className={styles["description-img"]}
